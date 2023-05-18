@@ -9,7 +9,7 @@
    
 </head>
 <body>
-    <form action="index.html">
+    <form action="index.php">
         <header class="cabecalho-home"> 
             <div>
             </div>    
@@ -22,25 +22,25 @@
     
     <div class="tela-login-home">
         <div>
-            <form>
+            
                 
                 <h2 class="sub-titulo-home">MENU</h2>
                 
                 <div class="entrada-dados-home">
-                    <a><button class="botao-logar">Cadastrar Usuario</button></a>
+                    <a href="cadastrousuario.php"><button class="botao-logar">Cadastrar Usuario</button></a>
                 </div>  
                 <div class="entrada-dados-home">
-                    <button class="botao-logar">Cadastrar Produto</button>
+                    <a href="cadastro.php"><button class="botao-logar">Cadastrar Produto</button>
                 </div>
                 <div class="entrada-dados-home">
-                    <button class="botao-logar">Consultar Produto</button>
+                    <a href="consulta.php"><button class="botao-logar">Consultar Produto</button></a>
                 </div> 
                 <div class="entrada-dados-home">
-                    <button class="botao-logar">Movimentar Produto</button>
+                    <a href="movimentar.php"><button class="botao-logar">Movimentar Produto</button></a>
                 </div>
 
 
-            </form> 
+            
 
         </div>
 

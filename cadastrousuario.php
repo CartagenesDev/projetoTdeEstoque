@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,33 +10,33 @@
    
 </head>
 <body>
-    <form action="index.html">
+    <form action="index.php">
         <header class="cabecalho-home"> 
             <div>
             </div>    
                 <nav class="menu-button-sair" >
-                	<button class="botao-sair" type="submit" >Sair</button>
+                	<button class="botao-sair">Sair</button>
             	</nav> 
         </header>  
     </form>
     <div class="tela-login-home">
         <div>
-            <form action="home.html">
+            <form action="conexao.php" method="POST">
             	<h2 class="sub-titulo-home">Registro</h2>
                 <div class="entrada-dados">
                     <span class="icone"><ion-icon name="person-outline"></ion-icon></span>
-                    <input type="text" required>
+                    <input type="text" id="usuario" name="usuario" required>
                     <label>Usuário</label>
                 </div> 
 
-                <div class="entrada-dados">
+                <div class="entrada-dados"> 
                     <span class="icone"><ion-icon name="mail-outline"></ion-icon></span>
-                    <input type="email" required>
+                    <input type="email" id="email"name="email"required>
                     <label>Email</label>
                 </div>  
                 <div class="entrada-dados">
                     <span class="icone"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                    <input type="password" required>
+                    <input type="password" id="senha" name="senha" required>
                     <label>password</label>
                 </div>
                 <div class="lembrar_dados">
@@ -44,11 +45,9 @@
                 	</label>  
                     
                 </div>
-                <button class="botao-logar" type="submit">Registrar</button>
-                <div class="registre-se">
-                  
-                </div>
-
+                <input class="botao-logar" id="submit" nome="submit" type="submit">
+                
+                
             </form>
 
         </div>
@@ -62,4 +61,4 @@
     </footer>
     
 </body>
-</html> 
+</html> */

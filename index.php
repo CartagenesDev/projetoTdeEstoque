@@ -24,21 +24,20 @@
     <div class="tela-login">
         <span class="icone-fechar"><ion-icon name="close"></ion-icon></span>
         <div class="titulo logar">
-            <h2>Login</h2>
-            <form action="home.html">
+            <h2>Login</h2>            
+            <form action="validaDados.php" method="POST">
                 <div class="entrada-dados">
                     <span class="icone"><ion-icon name="mail-outline"></ion-icon></span>
-                    <input type="email" required>
+                    <input type="email" name="email" required>
                     <label>Email</label>
                 </div>  
                 <div class="entrada-dados">
                     <span class="icone"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                    <input type="password" required>
-                    <label>password</label>
+                    <input type="password" name="senha" required>
+                    <label>Senha</label>
                 </div>
                 <div class="lembrar_dados">
-                    <label><input type="checkbox">
-                    Lembre-me</label>
+                <label><input type="checkbox" name="lembrar">Lembre-me</label>
                     <a href="#">Esqueceu sua senha?</a>
                 </div>
                 <button class="botao-logar" type="submit">Logar</button>
@@ -56,6 +55,8 @@
     <footer>
         <p>Todos os direios reservados a CartagenesDEV &copy; 2023</p>
     </footer>
+
+    
     
 </body>
 </html> 

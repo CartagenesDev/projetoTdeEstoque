@@ -15,7 +15,7 @@
         </div>    
         
         <nav class="menu-button">
-            <button class="botao" href="#">Sair</button>
+            <a href="index.php"><button class="botao" href="#">Sair</button></a>
         </nav>       
     
         </header>

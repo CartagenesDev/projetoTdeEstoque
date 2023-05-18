@@ -2,6 +2,7 @@ const telaLogin = document.querySelector('.tela-login');
 //const entrarLink = document.querySelector('.entrar-link');
 //const registrarLink = document.querySelector('.registrar-link');
 const botaoEntrar = document.querySelector('.botao');
+const iconeFechar = document.querySelector('.icone-fechar');
 
 //registrarLink.addEventListener("click", ()=> {
     //console.log(telaLogin);
@@ -14,4 +15,8 @@ const botaoEntrar = document.querySelector('.botao');
 
 botaoEntrar.addEventListener('click', ()=> {
     telaLogin.classList.add('active-popup');
+});
+iconeFechar.addEventListener('click', ()=> {
+    //console.log(iconeFechar);
+    telaLogin.classList.remove('active-popup');
 });

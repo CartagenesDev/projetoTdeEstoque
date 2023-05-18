@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +17,7 @@
         </div>    
         
         <nav class="menu-button">
-            <button class="botao" href="#">Sair</button>
+            <a href="index.php"><button class="botao" href="#">Sair</button></a>
         </nav>       
     
         </header>
@@ -23,30 +25,31 @@
         <div class="tela-login">            
             <div>
                 <h2 class="titulo_produto">Cadastrar Produto</h2>                
-                <form action="">                    
+                <form action="conexaoProduto.php" method="POST">                    
                     <div class="cadastro-produto">                       
-                        <label>Nome</label><br/>
-                        <input type="text" required>                 
+                        <label>Nome:</label><br/>
+                        <input type="text" name="produto" id="produto" required>                 
                        
                     </div>
                     <div class="cadastro-produto">                       
                         <label>Unidade:</label><br/>
-                        <input type="text" required>              
+                        <input type="text" name="unidade" id="unidade" required>              
                        
                     </div>
                     <div class="cadastro-produto">                       
                         <label>Valor:</label><br/>
-                        <input type="text" required>                 
+                        <input type="text" name="valor" id="valor"required>                 
                        
                     </div>
                     <div class="botao-cadastro-produto">
-                        <a href="#"><button class="botao-c">Cadastrar</button></a>
+                        <input class="botao-c" type="submit" name="submit">
                     </div>
                    
 
                   
 
                 </form>
+         
             </div>
 
         </div>
