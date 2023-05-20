@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,7 +23,7 @@
     <div class="tela-login-home">
         <div>
             <form action="conexao.php" method="POST">
-            	<h2 class="sub-titulo-home">Registro</h2>
+            	<h2 class="sub-titulo-home">Cadastro de usuario</h2>
                 <div class="entrada-dados">
                     <span class="icone"><ion-icon name="person-outline"></ion-icon></span>
                     <input type="text" id="usuario" name="usuario" required>
@@ -41,11 +42,15 @@
                 </div>
                 <div class="lembrar_dados">
                     <label><input type="checkbox">
-                    Concorda com os termos e condições
-                	</label>  
-                    
+                    Administrador
+                	</label>                      
                 </div>
-                <input class="botao-logar" id="submit" nome="submit" type="submit">
+                <div class="lembrar_dados">
+                    <label><input type="checkbox">
+                    Concorda com os termos e condições
+                	</label>                      
+                </div>
+                <input class="botao-logar" id="submit" nome="submit" type="submit" value="Salvar">
                 
                 
             </form>
@@ -61,4 +66,5 @@
     </footer>
     
 </body>
-</html> */
+</html> 
+

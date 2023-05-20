@@ -32,3 +32,5 @@ if ($resultado->num_rows > 0) {
     echo "Nome de usuário ou senha inválidos.";
 }
 ?>
+
+<a href="index.php"><input type="button" name="voltar" value="Voltar"></a>
