@@ -40,14 +40,15 @@
                     <input type="password" id="senha" name="senha" required>
                     <label>password</label>
                 </div>
-                <div class="lembrar_dados">
-                    <label><input type="checkbox">
-                    Administrador
-                	</label>                      
-                </div>
+               
                 <div class="lembrar_dados">
                     <label><input type="checkbox">
                     Concorda com os termos e condições
+                	</label>                      
+                </div>
+                <div class="lembrar_dados">
+                    <label><input name="ser_admin" type="checkbox"> 
+                    Administrador
                 	</label>                      
                 </div>
                 <input class="botao-logar" id="submit" nome="submit" type="submit" value="Salvar">

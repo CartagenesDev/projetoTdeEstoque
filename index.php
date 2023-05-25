@@ -40,6 +40,11 @@
                 <label><input type="checkbox" name="lembrar">Lembre-me</label>
                     <a href="#">Esqueceu sua senha?</a>
                 </div>
+                <div class="lembrar_dados">
+                    <label><input type="checkbox" name="admin">
+                    Administrador
+                	</label>                      
+                </div>
                 <button class="botao-logar" type="submit">Logar</button>
                 <div class="registre-se">
                     

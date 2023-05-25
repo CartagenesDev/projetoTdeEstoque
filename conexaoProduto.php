@@ -146,15 +146,24 @@ footer {
 
                
             <?php
-
-                if ($conn->query($sql) === TRUE) {
-                    echo "Dados inseridos com sucesso!";
+                $query = "SELECT * FROM cadastro_produtos WHERE nomeProduto = '$nomeProduto'";
+                $result = $conn->query($query);
+                
+                if ($result->num_rows > 0) {
+                    // Usuário já cadastrado, exibir mensagem ou realizar ações adequadas
+                    echo "Produto já cadastrado.";
                 } else {
-                    echo "Erro ao inserir dados: " . $conn->error;
-                }
+                
 
-                // Fechar a conexão com o banco de dados
-                $conn->close();
+                    if ($conn->query($sql) === TRUE) {
+                        echo "Dados inseridos com sucesso!";
+                    } else {
+                        echo "Erro ao inserir dados: " . $conn->error;
+                    }
+
+                    // Fechar a conexão com o banco de dados
+                    $conn->close();
+                }    
             ?>        
 
     

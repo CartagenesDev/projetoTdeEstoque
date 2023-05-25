@@ -17,12 +17,20 @@ if ($resultado->num_rows > 0) {
     $row = $resultado->fetch_assoc();
 
     // Verifique a senha
-    if ($senha1 == $row['senha']) { // Aqui estamos comparando as senhas sem hash
-        // A senha está correta, as informações de login são válidas
-        // Realize as ações necessárias, como definir sessões ou cookies
-        // Redirecione para a página inicial ou área restrita
-        header("Location: home.php");
-        exit();
+    if ($senha1 == $row['senha']) {
+        
+        if ($row['ser_admin'] == 1) {
+            // O usuário é um administrador
+            // Realize as ações específicas de administrador, como cadastrar usuários
+            header("Location: administrador.php");
+            exit();
+        } else {
+            // O usuário não é um administrador
+            // Realize as ações padrão, redirecionar para a página do usuário normal, por exemplo
+            header("Location:home.php");
+            exit();
+        }
+       
     } else {
         // A senha está incorreta
         echo "Nome de usuário ou senha inválidos.";

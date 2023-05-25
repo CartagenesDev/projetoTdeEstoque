@@ -33,11 +33,12 @@
                     <a href="cadastro.php"><button class="botao-logar">Cadastrar Produto</button>
                 </div>
                 <div class="entrada-dados-home">
-                    <a href="consulta.php"><button class="botao-logar">Consultar Produto</button></a>
-                </div> 
-                <div class="entrada-dados-home">
-                    <a href="movimentar_produto.php"><button class="botao-logar">Movimentar Produto</button></a>
+                    <a href="deletarUsuario.php"><button class="botao-logar">Deletar Usuario</button>
                 </div>
+                <div class="entrada-dados-home">
+                    <a href="cadastro.php"><button class="botao-logar">Deletar Produto</button>
+                </div>
+               
 
 
             

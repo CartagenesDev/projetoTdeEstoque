@@ -14,9 +14,27 @@ if ($conn->connect_error) {
 $usuario = $_POST['usuario'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
+//verifica se o campo checkbox administador oi marcado
+//? 1 : 0: É conhecido como operador ternário. Se a expressão anterior for avaliada 
+//como verdadeira (ou seja, o checkbox está marcado), o valor atribuído à variável 
+//$ser_admin será 1. Caso contrário, se a expressão for falsa (o checkbox não está marcado), 
+//o valor atribuído será 0
+$ser_admin = isset($_POST['ser_admin']) && $_POST['ser_admin'] == 'on'? 1 : 0;
+
+// Verifica se o usuário já está cadastrado como administrador
+if ($ser_admin) {
+    $sql = "SELECT * FROM cadastro_usuario WHERE email = '$email' AND ser_admin = 1";
+    $resultado = $conn->query($sql);
+
+    if ($resultado->num_rows > 0) {
+        // Usuário já cadastrado como administrador
+        echo "Usuário já cadastrado como administrador.";
+        exit();
+    }
+}   
 
 // Preparar a consulta SQL para inserir os dados no banco de dados
-$sql = "INSERT INTO cadastro_usuario (nome_usuario, email, senha) VALUES ('$usuario', '$email', '$senha')";
+$sql = "INSERT INTO cadastro_usuario (nome_usuario, email, senha, ser_admin) VALUES ('$usuario', '$email', '$senha', '$ser_admin')";
 
 
 ?>
@@ -149,24 +167,24 @@ footer {
 
                
             <?php
-            $query = "SELECT * FROM cadastro_usuario WHERE email = '$email'";
-            $result = $conn->query($query);
-            
-            if ($result->num_rows > 0) {
-                // Usuário já cadastrado, exibir mensagem ou realizar ações adequadas
-                echo "Usuário já cadastrado.";
-            } else {
-            
-
-                if ($conn->query($sql) === TRUE) {
-                    echo "Dados inseridos com sucesso!";
+                $query = "SELECT * FROM cadastro_usuario WHERE email = '$email'";
+                $result = $conn->query($query);
+                
+                if ($result->num_rows > 0) {
+                    // Usuário já cadastrado, exibir mensagem ou realizar ações adequadas
+                    echo "Usuário já cadastrado.";
                 } else {
-                    echo "Erro ao inserir dados: " . $conn->error;
-                }
+                
 
-                // Fechar a conexão com o banco de dados
-                $conn->close();
-            }    
+                    if ($conn->query($sql) === TRUE) {
+                        echo "Dados inseridos com sucesso!";
+                    } else {
+                        echo "Erro ao inserir dados: " . $conn->error;
+                    }
+
+                    // Fechar a conexão com o banco de dados
+                    $conn->close();
+                }    
             ?>        
 
     
@@ -184,6 +202,8 @@ footer {
     
     
 </body>
+
+</html>
 
 
 
