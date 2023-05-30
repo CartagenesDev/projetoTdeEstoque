@@ -213,7 +213,7 @@
                             echo "<td>{$row['email']}</td>";
                             echo "<td>{$row['senha']}</td>";
                             echo "<td>{$row['ser_admin']}</td>";
-                            echo "<td><a href='deletarUsuario.php?id={$row['ID']}'>Excluir</a></td>";
+                            echo "<td><a href='alteraUser.php?id={$row['ID']}'>Alterar</a></td>";
                             echo "</tr>";
                         }
                     } else {

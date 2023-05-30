@@ -27,7 +27,7 @@
                 <h2 class="sub-titulo-home">MENU</h2>
                 
                 <div class="entrada-dados-home">
-                    <a href="cadastrousuario.php"><button class="botao-logar">Cadastrar Usuario</button></a>
+                    <a href="alterarUsuario.php"><button class="botao-logar">Alterar Usuario</button></a>
                 </div>  
                 <div class="entrada-dados-home">
                     <a href="cadastro.php"><button class="botao-logar">Cadastrar Produto</button>

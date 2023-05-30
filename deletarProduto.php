@@ -97,7 +97,6 @@
             font-size: 40px;
             background-color: white;
             text-align: center;
-            
 
         }
 
@@ -151,8 +150,7 @@
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Email</th>
-                    <th>Senha</th>
-                    <th>admin</th>
+                    <th>Senha</th>                    
                     <th>Ações</th>
                 
                 </tr>
@@ -175,7 +173,7 @@
                         $id = $_GET['id'];
 
                         // Constrói a consulta SQL para excluir o registro
-                        $sql = "DELETE FROM cadastro_usuario WHERE ID = '$id'";
+                        $sql = "DELETE FROM cadastro_produtos WHERE codProduto = '$id'";
 
                         // Executa a consulta
                         if ($conn->query($sql) === TRUE) {
@@ -194,26 +192,24 @@
                     //}
                 
                     // Consulta SQL para obter os registros dos usuários
-                    $sql = "SELECT * FROM cadastro_usuario";
+                    $sql = "SELECT * FROM cadastro_produtos";
                     $resultado = $conn->query($sql);
                     
                     if ($resultado->num_rows > 0) {
                         echo "<tr>";
-                        echo "<td>ID</td>";
-                        echo "<td>nome_usuario</td>";
-                        echo "<td>email</td>";
-                        echo "<td>senha</td>";
-                        echo "<td>ser_admin</td>";
+                        echo "<td>codProduto</td>";
+                        echo "<td>nomeProduto</td>";
+                        echo "<td>unidadeProduto</td>";
+                        echo "<td>valorProduto</td>";                        
                         echo "<td>acão</td>";
                         // Exibir cada registro de usuário na tabela
                         while ($row = $resultado->fetch_assoc()) {
                             echo "<tr>";
-                            echo "<td>{$row['ID']}</td>";
-                            echo "<td>{$row['nome_usuario']}</td>";
-                            echo "<td>{$row['email']}</td>";
-                            echo "<td>{$row['senha']}</td>";
-                            echo "<td>{$row['ser_admin']}</td>";
-                            echo "<td><a href='deletarUsuario.php?id={$row['ID']}'>Excluir</a></td>";
+                            echo "<td>{$row['codProduto']}</td>";
+                            echo "<td>{$row['nomeProduto']}</td>";
+                            echo "<td>{$row['unidadeProduto']}</td>";
+                            echo "<td>{$row['valorProduto']}</td>";                           
+                            echo "<td><a href='deletarProduto.php?id={$row['codProduto']}'>Excluir</a></td>";
                             echo "</tr>";
                         }
                     } else {

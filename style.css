@@ -8,7 +8,8 @@
 
 
 body {
-    background: url(icon\ principal.jpg) no-repeat;
+    background: url(icon\ principal.jpg) no-repeat; 
+    background: #e2e4ee;
     min-height: 100vh;
     display: flex;
     justify-content: center;
